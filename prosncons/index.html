@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProsNCons — bodgy.dev</title>
+  <meta name="description" content="ProsNCons is a collaborative pros & cons app for iPhone. List the good and the not-so-good, and text a link so friends can weigh in.">
+  <meta name="theme-color" content="#FFF7EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17151F" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="ProsNCons — bodgy.dev">
+  <meta property="og:image" content="https://bodgy.dev/assets/shots/prosncons-1.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="bodgy.dev home"><span class="mark" aria-hidden="true">b</span><span>bodgy<span class="tld">.dev</span></span></a>
+      <nav class="nav" aria-label="Products">
+        <a href="/prosncons/" aria-current="page">ProsNCons</a>
+        <a href="/thisorthat/">ThisOrThat</a>
+        <a href="/strngth/">STRNGTH</a>
+        <a href="/bellbearing/">Bell Bearing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tint-mint">
+    <section class="product-hero wrap">
+      <img class="app-icon" src="/assets/icons/prosncons.png" alt="ProsNCons app icon" width="132" height="132">
+      <div>
+        <h1>ProsNCons</h1>
+        <p class="tagline">A collaborative pros &amp; cons list for iPhone. Start a decision, list the good and the not-so-good, and text a link so friends can weigh in.</p>
+        <div class="chips"><span class="chip">iPhone · iOS 18+</span><span class="chip">No accounts</span><span class="chip">Updates in seconds</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-wrap" aria-label="Screenshots">
+      <ul class="gallery">
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/prosncons-1.jpg" alt="A decision titled Get a puppy, with four pros and three cons from four people, leaning yes" loading="lazy" width="797" height="1734"></div><figcaption>Two columns, everyone's input</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/prosncons-2.jpg" alt="The decision list, each card in its own color with pro and con counts and the people deciding" loading="lazy" width="797" height="1734"></div><figcaption>Every decision at a glance</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/prosncons-3.jpg" alt="An invite sheet: Peppy Beaver wants your help deciding, with a Join decision button" loading="lazy" width="797" height="1734"></div><figcaption>One tap to join</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/prosncons-4.jpg" alt="The Get a puppy decision in dark mode" loading="lazy" width="797" height="1734"></div><figcaption>Plum after dark</figcaption></figure></li>
+      </ul>
+    </section>
+
+    <section class="section wrap">
+      <div class="split">
+        <div class="prose">
+          <h2>Decide out loud, with your people.</h2>
+          <p style="margin-top:14px">Some decisions are better made with a group chat's worth of opinions. ProsNCons gives everyone the same two columns and lets them fill them in together, from wherever they are.</p>
+          <ul>
+            <li><strong>Owners own the framing.</strong> Only a decision's creator can change its title, notes and color, or invite and remove people.</li>
+            <li><strong>Everyone owns the list.</strong> Anyone in a decision can add, edit, move or delete pros and cons, and everyone sees it within a few seconds.</li>
+            <li><strong>Invites are one-time links.</strong> Each link works for exactly one person and expires after a week. Text it, and it opens straight into the app.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:8px">Under the hood</h3>
+          <dl class="stack">
+            <div class="stack-row"><dt>App</dt><dd>SwiftUI, Swift 6</dd></div>
+            <div class="stack-row"><dt>API</dt><dd>Cloudflare Workers + Hono</dd></div>
+            <div class="stack-row"><dt>Data</dt><dd>D1 (SQLite)</dd></div>
+            <div class="stack-row"><dt>Pushes</dt><dd>Straight to APNs, no relay</dd></div>
+            <div class="stack-row"><dt>Links</dt><dd>Universal Links on pnc.bodgy.dev</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head"><h2>The little things</h2></div>
+      <div class="features">
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🦦</span>No accounts</h3><p>You get a random identity, like "Bubbly Otter", the first time the app opens. It rides along in iCloud Keychain to your other devices. Tap it to shuffle.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🔔</span>Polite notifications</h3><p>When someone joins or changes a decision, everyone else gets one short summary, like "🦊 Zippy Fox added 2 pros", at most once every few minutes.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🪶</span>Built to run for free</h3><p>The whole backend fits on Cloudflare's free tier. An open decision checks for news every few seconds for the cost of reading a single row.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🗑️</span>Leave anytime</h3><p>Delete your data from the app and you're gone, along with the decisions you started. Tokens and invite codes are only ever stored as hashes.</p></div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head"><h2>More from the bench</h2></div>
+      <div class="siblings">
+        <a class="card sibling" href="/thisorthat/"><img src="/assets/icons/thisorthat.png" alt=""><div><strong>ThisOrThat</strong><span>Two options. One winner.</span></div></a>
+        <a class="card sibling" href="/strngth/"><img src="/assets/icons/strngth.png" alt=""><div><strong>STRNGTH</strong><span>Your coach's program, logged.</span></div></a>
+        <a class="card sibling" href="/bellbearing/"><img src="/assets/icons/bellbearing.png" alt=""><div><strong>Bell Bearing</strong><span>Motion tracker. Taco target.</span></div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 bodgy.dev</span>
+      <span>Made with care, and the occasional bodge.</span>
+    </div>
+  </footer>
+</body>
+</html>

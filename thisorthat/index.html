@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThisOrThat — bodgy.dev</title>
+  <meta name="description" content="ThisOrThat is a collaborative decision matrix for iPhone. Pit two options against each other, weigh what matters, and let the score settle it.">
+  <meta name="theme-color" content="#FFF7EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17151F" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="ThisOrThat — bodgy.dev">
+  <meta property="og:image" content="https://bodgy.dev/assets/shots/thisorthat-1.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="bodgy.dev home"><span class="mark" aria-hidden="true">b</span><span>bodgy<span class="tld">.dev</span></span></a>
+      <nav class="nav" aria-label="Products">
+        <a href="/prosncons/">ProsNCons</a>
+        <a href="/thisorthat/" aria-current="page">ThisOrThat</a>
+        <a href="/strngth/">STRNGTH</a>
+        <a href="/bellbearing/">Bell Bearing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tint-tangerine">
+    <section class="product-hero wrap">
+      <img class="app-icon" src="/assets/icons/thisorthat.png" alt="ThisOrThat app icon" width="132" height="132">
+      <div>
+        <h1>ThisOrThat</h1>
+        <p class="tagline">A collaborative decision matrix for iPhone. Pit two options against each other, add what matters, and let everyone pull each criterion toward the one that wins it.</p>
+        <div class="chips"><span class="chip">iPhone · iOS 18+</span><span class="chip">No accounts</span><span class="chip">Sibling of ProsNCons</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-wrap" aria-label="Screenshots">
+      <ul class="gallery">
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/thisorthat-1.jpg" alt="Civic or RAV4: RAV4 leads 55 to 45, with weighted criteria like gas mileage and room for the dog" loading="lazy" width="797" height="1734"></div><figcaption>The score adds it all up</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/thisorthat-2.jpg" alt="The decision list: Civic or RAV4, Lisbon or Kyoto, and keep or sell the old Civic, each with its score" loading="lazy" width="797" height="1734"></div><figcaption>Every matchup, scored</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/thisorthat-3.jpg" alt="An invite sheet: Sparkly Otter wants your take on Civic or RAV4" loading="lazy" width="797" height="1734"></div><figcaption>Friends join with one link</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/thisorthat-4.jpg" alt="Civic or RAV4 in dark mode" loading="lazy" width="797" height="1734"></div><figcaption>Just as chunky at night</figcaption></figure></li>
+      </ul>
+    </section>
+
+    <section class="section wrap">
+      <div class="split">
+        <div class="prose">
+          <h2>For "this one or that one?"</h2>
+          <p style="margin-top:14px">ProsNCons is for yes-or-no questions. ThisOrThat is for the other kind: Civic or RAV4, Lisbon or Kyoto, the blue couch or the green one.</p>
+          <ul>
+            <li><strong>Two options, shared criteria.</strong> Each decision has a "this" on the left and a "that" on the right, each in its own color.</li>
+            <li><strong>Everyone votes, the weight is shared.</strong> Each criterion has a weight anyone can change, and each person leans it up to three notches toward either option. Other people's votes ride above the slider as little avatars.</li>
+            <li><strong>Everyone, or just me.</strong> Flip the scoreboard between the group's verdict and your own.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:8px">Under the hood</h3>
+          <dl class="stack">
+            <div class="stack-row"><dt>App</dt><dd>SwiftUI, Swift 6</dd></div>
+            <div class="stack-row"><dt>API</dt><dd>Cloudflare Workers + Hono</dd></div>
+            <div class="stack-row"><dt>Data</dt><dd>D1 (SQLite)</dd></div>
+            <div class="stack-row"><dt>Design</dt><dd>Shared with ProsNCons</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head"><h2>How the score works</h2></div>
+      <div class="features">
+        <div class="card"><h3><span class="glyph" aria-hidden="true">⚖️</span>Start at even</h3><p>"This" starts with 50 points. A criterion nobody has voted on counts as even, so it can't tip anything.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🏋️</span>Weigh what matters</h3><p>Every criterion's average lean is multiplied by its weight, from "A little" to "Top priority".</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">💯</span>Scaled to 100</h3><p>A unanimous "way better" on every criterion is a perfect 100. "What's driving it" lists the criteria moving the score most.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🔁</span>Swap sides</h3><p>Votes belong to a side, not a name. Rename an option and the votes stay. Swap sides and every vote flips with it.</p></div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head"><h2>More from the bench</h2></div>
+      <div class="siblings">
+        <a class="card sibling" href="/prosncons/"><img src="/assets/icons/prosncons.png" alt=""><div><strong>ProsNCons</strong><span>Pros and cons, together.</span></div></a>
+        <a class="card sibling" href="/strngth/"><img src="/assets/icons/strngth.png" alt=""><div><strong>STRNGTH</strong><span>Your coach's program, logged.</span></div></a>
+        <a class="card sibling" href="/bellbearing/"><img src="/assets/icons/bellbearing.png" alt=""><div><strong>Bell Bearing</strong><span>Motion tracker. Taco target.</span></div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 bodgy.dev</span>
+      <span>Made with care, and the occasional bodge.</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,313 @@
+/*
+  bodgy.dev — the ProsNCons design system, on the web.
+
+  Flat, candy-colored, a little chunky. Everything sits on a warm cream page
+  (deep plum at night) and "solid" surfaces get a darker edge underneath
+  instead of a shadow. Values mirror ios/ProsNCons/Design/Theme.swift.
+*/
+
+:root {
+  --page: #FFF7EE;
+  --surface: #FFFFFF;
+  --surface-edge: #F0E4D7;
+  --ink: #2B2540;
+  --ink-soft: #7D7591;
+
+  --strawberry: #FF5C7A; --strawberry-edge: #C7485F; --strawberry-soft: #FFE5EA; --strawberry-soft-edge: #FFC1CC; --strawberry-ink: #A04360;
+  --tangerine: #FF9A3C;  --tangerine-edge: #C7782F;  --tangerine-soft: #FFEFE0;  --tangerine-soft-edge: #FFD9B5;  --tangerine-ink: #A0653E;
+  --lemon: #FFC53D;      --lemon-edge: #C79A30;      --lemon-soft: #FFF6E0;      --lemon-soft-edge: #FFE9B5;      --lemon-ink: #A07D3E;
+  --mint: #2ECC8F;       --mint-edge: #249F70;       --mint-soft: #DEF7ED;       --mint-soft-edge: #B0ECD4;       --mint-ink: #2D816B;
+  --lagoon: #1FC2BC;     --lagoon-edge: #189793;     --lagoon-soft: #DBF5F4;     --lagoon-soft-edge: #AAE8E6;     --lagoon-ink: #247B84;
+  --sky: #4AA8FF;        --sky-edge: #3A83C7;        --sky-soft: #E2F1FF;        --sky-soft-edge: #BADEFF;        --sky-ink: #3C6DA9;
+  --grape: #8E6CFF;      --grape-edge: #6F54C7;      --grape-soft: #EDE7FF;      --grape-soft-edge: #D4C7FF;      --grape-ink: #614CA9;
+  --bubblegum: #FF7EC8;  --bubblegum-edge: #C7629C;  --bubblegum-soft: #FFEAF6;  --bubblegum-soft-edge: #FFCEEA;  --bubblegum-ink: #A0568B;
+
+  --font: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, -apple-system, sans-serif;
+  --springy: cubic-bezier(.34, 1.56, .64, 1);
+  --radius: 22px;
+  --depth: 4px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #17151F;
+    --surface: #25222F;
+    --surface-edge: #0E0C14;
+    --ink: #F5F2FA;
+    --ink-soft: #A9A2BD;
+
+    --strawberry-edge: #993749; --strawberry-soft: #4A2533; --strawberry-soft-edge: #301722; --strawberry-ink: #FF95A9;
+    --tangerine-edge: #995C24;  --tangerine-soft: #4A3225;  --tangerine-soft-edge: #30201A;  --tangerine-ink: #FFBD80;
+    --lemon-edge: #997625;      --lemon-soft: #4A3C26;      --lemon-soft-edge: #30261A;      --lemon-ink: #FFD981;
+    --mint-edge: #1C7A56;       --mint-soft: #1C3D38;       --mint-soft-edge: #122725;       --mint-ink: #77DEB6;
+    --lagoon-edge: #137471;     --lagoon-soft: #193B42;     --lagoon-soft-edge: #10252C;     --lagoon-ink: #6DD7D3;
+    --sky-edge: #2C6599;        --sky-soft: #223550;        --sky-soft-edge: #162235;        --sky-ink: #89C6FF;
+    --grape-edge: #554199;      --grape-soft: #312850;      --grape-soft-edge: #201935;      --grape-ink: #B69FFF;
+    --bubblegum-edge: #994C78;  --bubblegum-soft: #4A2C44;  --bubblegum-soft-edge: #301C2D;  --bubblegum-ink: #FFABDB;
+  }
+}
+
+/* A palette color, picked per element: class="tint-mint" etc. */
+.tint-strawberry { --base: var(--strawberry); --edge: var(--strawberry-edge); --soft: var(--strawberry-soft); --soft-edge: var(--strawberry-soft-edge); --tint-ink: var(--strawberry-ink); --on-base: #fff; }
+.tint-tangerine  { --base: var(--tangerine);  --edge: var(--tangerine-edge);  --soft: var(--tangerine-soft);  --soft-edge: var(--tangerine-soft-edge);  --tint-ink: var(--tangerine-ink);  --on-base: #fff; }
+.tint-lemon      { --base: var(--lemon);      --edge: var(--lemon-edge);      --soft: var(--lemon-soft);      --soft-edge: var(--lemon-soft-edge);      --tint-ink: var(--lemon-ink);      --on-base: #5C4300; }
+.tint-mint       { --base: var(--mint);       --edge: var(--mint-edge);       --soft: var(--mint-soft);       --soft-edge: var(--mint-soft-edge);       --tint-ink: var(--mint-ink);       --on-base: #fff; }
+.tint-lagoon     { --base: var(--lagoon);     --edge: var(--lagoon-edge);     --soft: var(--lagoon-soft);     --soft-edge: var(--lagoon-soft-edge);     --tint-ink: var(--lagoon-ink);     --on-base: #fff; }
+.tint-sky        { --base: var(--sky);        --edge: var(--sky-edge);        --soft: var(--sky-soft);        --soft-edge: var(--sky-soft-edge);        --tint-ink: var(--sky-ink);        --on-base: #fff; }
+.tint-grape      { --base: var(--grape);      --edge: var(--grape-edge);      --soft: var(--grape-soft);      --soft-edge: var(--grape-soft-edge);      --tint-ink: var(--grape-ink);      --on-base: #fff; }
+.tint-bubblegum  { --base: var(--bubblegum);  --edge: var(--bubblegum-edge);  --soft: var(--bubblegum-soft);  --soft-edge: var(--bubblegum-soft-edge);  --tint-ink: var(--bubblegum-ink);  --on-base: #fff; }
+
+/* ---------- Base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; }
+
+h1, h2, h3 { line-height: 1.1; margin: 0; font-weight: 900; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.5rem, 7vw, 4.25rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; }
+p { margin: 0; }
+
+.wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+
+.soft { color: var(--ink-soft); }
+
+::selection { background: var(--grape); color: #fff; }
+
+:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; border-radius: 8px; }
+
+/* ---------- Header / footer ---------- */
+
+.site-header { padding: 20px 0; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+.wordmark {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 900; font-size: 1.35rem; letter-spacing: -0.03em; text-decoration: none;
+}
+.wordmark .mark {
+  display: grid; place-items: center;
+  width: 38px; height: 38px; border-radius: 12px;
+  background: var(--grape); color: #fff;
+  box-shadow: 0 3px 0 var(--grape-edge);
+  font-size: 1.3rem; line-height: 1;
+  transform: rotate(-6deg);
+  transition: transform .35s var(--springy);
+}
+.wordmark:hover .mark { transform: rotate(6deg) scale(1.06); }
+.wordmark .tld { color: var(--ink-soft); }
+
+.nav { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.nav a {
+  text-decoration: none; font-weight: 800; font-size: .95rem;
+  padding: 6px 12px; border-radius: 999px; color: var(--ink-soft);
+}
+.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); background: var(--surface); box-shadow: 0 3px 0 var(--surface-edge); }
+
+.site-footer { padding: 56px 0 40px; color: var(--ink-soft); font-size: .95rem; }
+.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 2px dashed var(--surface-edge); padding-top: 24px; }
+
+@media (max-width: 640px) {
+  .site-header .wrap { flex-direction: column; align-items: flex-start; }
+  .nav { justify-content: flex-start; margin-left: -12px; }
+}
+
+/* ---------- Chunky surfaces ---------- */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 var(--depth) 0 var(--surface-edge);
+  padding: 24px;
+}
+.card.soft-tint { background: var(--soft); box-shadow: 0 var(--depth) 0 var(--soft-edge); }
+.card.base-tint { background: var(--base); box-shadow: 0 var(--depth) 0 var(--edge); color: var(--on-base); }
+
+/* Buttons that physically press down onto their edge. */
+.btn {
+  --b-fill: var(--base, var(--grape));
+  --b-edge: var(--edge, var(--grape-edge));
+  --b-ink: var(--on-base, #fff);
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font: inherit; font-weight: 900; font-size: 1rem;
+  padding: 13px 22px; border: 0; border-radius: 16px; cursor: pointer;
+  background: var(--b-fill); color: var(--b-ink); text-decoration: none;
+  box-shadow: 0 4px 0 var(--b-edge);
+  transform: translateY(0);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 5px 0 var(--b-edge); }
+.btn:active { transform: translateY(4px); box-shadow: 0 0 0 var(--b-edge); }
+.btn.plain { --b-fill: var(--surface); --b-edge: var(--surface-edge); --b-ink: var(--ink); }
+.btn.small { padding: 8px 14px; font-size: .9rem; border-radius: 12px; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 999px;
+  font-weight: 800; font-size: .85rem;
+  background: var(--soft, var(--surface)); color: var(--tint-ink, var(--ink-soft));
+  box-shadow: 0 2px 0 var(--soft-edge, var(--surface-edge));
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.app-icon {
+  width: 96px; height: 96px; border-radius: 22.5%;
+  box-shadow: 0 4px 0 var(--surface-edge);
+  background: var(--surface);
+}
+
+/* ---------- Home ---------- */
+
+.hero { padding: 48px 0 40px; }
+.hero h1 .squiggle { color: var(--grape); display: inline-block; transform: rotate(-3deg); }
+.hero p.lede { font-size: clamp(1.1rem, 2.4vw, 1.35rem); color: var(--ink-soft); max-width: 36em; margin-top: 18px; font-weight: 600; }
+
+.tiles { display: flex; gap: 10px; margin-bottom: 26px; }
+.tiles span {
+  width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+  font-weight: 900; font-size: 1.5rem; color: var(--on-base);
+  background: var(--base); box-shadow: 0 4px 0 var(--edge);
+  animation: bob 3.2s ease-in-out infinite;
+}
+.tiles span:nth-child(1) { transform: rotate(-8deg); }
+.tiles span:nth-child(2) { animation-delay: -.8s; transform: rotate(5deg); }
+.tiles span:nth-child(3) { animation-delay: -1.6s; transform: rotate(-3deg); }
+.tiles span:nth-child(4) { animation-delay: -2.4s; transform: rotate(9deg); }
+@keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 24px; }
+
+.product-card {
+  display: flex; flex-direction: column; gap: 16px;
+  text-decoration: none;
+  transition: transform .35s var(--springy), box-shadow .2s ease;
+}
+.product-card:hover { transform: translateY(-4px) rotate(-.4deg); box-shadow: 0 8px 0 var(--surface-edge); }
+.product-card:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--surface-edge); }
+.product-card .top { display: flex; gap: 18px; align-items: center; }
+.product-card .app-icon { width: 76px; height: 76px; flex: none; }
+.product-card .tagline { color: var(--ink-soft); font-weight: 700; margin-top: 4px; }
+.product-card .blurb { font-weight: 500; }
+.product-card .more { margin-top: auto; font-weight: 900; color: var(--tint-ink); }
+.product-card:hover .more .arrow { translate: 4px 0; }
+.product-card .more .arrow { display: inline-block; transition: translate .3s var(--springy); }
+
+.section { padding: 40px 0; }
+.section-head { margin-bottom: 22px; }
+.section-head p { color: var(--ink-soft); margin-top: 8px; font-weight: 600; }
+
+.about { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 18px; }
+.about .card h3 { margin-bottom: 6px; }
+.about .emoji { font-size: 1.8rem; margin-bottom: 8px; display: block; }
+
+/* ---------- Product pages ---------- */
+
+.product-hero { padding: 32px 0 24px; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.product-hero .app-icon { width: 132px; height: 132px; transform: rotate(-4deg); }
+.product-hero .tagline { font-size: clamp(1.15rem, 2.6vw, 1.45rem); font-weight: 700; color: var(--ink-soft); margin-top: 10px; max-width: 30em; }
+.product-hero .chips { margin-top: 18px; }
+@media (max-width: 640px) {
+  .product-hero { grid-template-columns: 1fr; gap: 20px; }
+  .product-hero .app-icon { width: 104px; height: 104px; }
+}
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+.features .card h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.features .card .glyph {
+  width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; flex: none;
+  background: var(--soft); box-shadow: 0 3px 0 var(--soft-edge); font-size: 1.1rem;
+}
+.features .card p { color: var(--ink-soft); font-weight: 500; }
+
+.split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: start; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+
+.prose p + p { margin-top: 12px; }
+.prose p { font-weight: 500; }
+.prose ul { padding-left: 1.2em; margin: 12px 0 0; }
+.prose li { margin: 6px 0; font-weight: 500; }
+
+.stack { display: grid; gap: 10px; }
+.stack-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 2px dashed var(--surface-edge); }
+.stack-row:last-child { border-bottom: 0; }
+.stack-row dt { font-weight: 800; }
+.stack-row dd { margin: 0; color: var(--ink-soft); font-weight: 600; text-align: right; }
+
+.callout { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.callout p { font-weight: 700; }
+
+.fine { font-size: .9rem; color: var(--ink-soft); font-weight: 500; }
+
+.siblings { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px; }
+.sibling { display: flex; align-items: center; gap: 12px; text-decoration: none; padding: 14px; }
+.sibling img { width: 44px; height: 44px; border-radius: 22.5%; }
+.sibling strong { display: block; }
+.sibling span { font-size: .9rem; color: var(--ink-soft); font-weight: 600; }
+.sibling:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--surface-edge); }
+.sibling { transition: transform .3s var(--springy), box-shadow .2s ease; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ---------- Screenshots ---------- */
+
+/* A row of phones; scrolls sideways on narrow screens instead of shrinking. */
+.gallery {
+  display: flex; gap: 28px; justify-content: center; align-items: flex-start;
+  margin: 0; padding: 18px 16px 34px; list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.gallery::-webkit-scrollbar { display: none; }
+@media (max-width: 860px) { .gallery { justify-content: flex-start; } }
+
+.shot { flex: 0 0 auto; margin: 0; scroll-snap-align: center; text-align: center; }
+.gallery li:nth-child(odd) .phone { transform: rotate(-1.5deg); }
+.gallery li:nth-child(even) .phone { transform: rotate(1.5deg) translateY(18px); }
+.gallery li:nth-child(even) figcaption { margin-top: 32px; }
+.shot figcaption { margin-top: 14px; font-weight: 800; font-size: .95rem; color: var(--ink-soft); max-width: 220px; margin-inline: auto; }
+
+.phone {
+  width: clamp(190px, 21vw, 236px);
+  padding: 7px; border-radius: 38px;
+  background: #16141D;
+  box-shadow: 0 6px 0 var(--surface-edge), inset 0 0 0 1.5px rgba(255, 255, 255, .08);
+  transition: transform .45s var(--springy);
+}
+.gallery li .phone:hover { transform: rotate(0) translateY(-6px) scale(1.02); }
+.phone img { width: 100%; height: auto; aspect-ratio: 797 / 1734; object-fit: cover; border-radius: 31px; background: var(--surface); }
+
+.gallery-wrap { margin-inline: auto; max-width: 1180px; }
+
+/* Home: the four apps fanned out under the headline. */
+.fan { display: flex; justify-content: center; padding: 12px 0 8px; margin-top: 8px; }
+.fan a { display: block; margin: 0 -18px; transition: transform .45s var(--springy); position: relative; }
+.fan .phone { width: clamp(118px, 19vw, 200px); padding: 5px; border-radius: 30px; }
+.fan .phone img { border-radius: 25px; }
+.fan a:nth-child(1) { transform: rotate(-8deg) translateY(24px); z-index: 1; }
+.fan a:nth-child(2) { transform: rotate(-2.5deg); z-index: 2; }
+.fan a:nth-child(3) { transform: rotate(2.5deg); z-index: 3; }
+.fan a:nth-child(4) { transform: rotate(8deg) translateY(24px); z-index: 2; }
+.fan a:hover { transform: translateY(-14px) rotate(0) scale(1.04); z-index: 5; }
+.fan .phone:hover { transform: none; }
+@media (max-width: 560px) { .fan a { margin: 0 -26px; } }

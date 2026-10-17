@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bell Bearing — bodgy.dev</title>
+  <meta name="description" content="Bell Bearing is an iPhone compass that always points at the nearest Taco Bell, styled like a sci-fi motion tracker with a phosphor CRT.">
+  <meta name="theme-color" content="#FFF7EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17151F" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Bell Bearing — bodgy.dev">
+  <meta property="og:image" content="https://bodgy.dev/assets/shots/bellbearing-1.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="bodgy.dev home"><span class="mark" aria-hidden="true">b</span><span>bodgy<span class="tld">.dev</span></span></a>
+      <nav class="nav" aria-label="Products">
+        <a href="/prosncons/">ProsNCons</a>
+        <a href="/thisorthat/">ThisOrThat</a>
+        <a href="/strngth/">STRNGTH</a>
+        <a href="/bellbearing/" aria-current="page">Bell Bearing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tint-lagoon">
+    <section class="product-hero wrap">
+      <img class="app-icon" src="/assets/icons/bellbearing.png" alt="Bell Bearing app icon" width="132" height="132">
+      <div>
+        <h1>Bell Bearing</h1>
+        <p class="tagline">A compass that always points at the nearest Taco Bell, dressed up as a sci-fi motion tracker. Its return blip pings higher the closer you get.</p>
+        <div class="chips"><span class="chip">iPhone · iOS 17+</span><span class="chip">No accounts, no API keys</span><span class="chip">Synthesized sound</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-wrap" aria-label="Screenshots">
+      <ul class="gallery">
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/bellbearing-1.jpg" alt="The tracker in green phosphor: an arrow points at a blip three quarters of a mile away, with the Taco Bell's address below" loading="lazy" width="797" height="1734"></div><figcaption>Target acquired</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/bellbearing-2.jpg" alt="The same tracker in amber phosphor" loading="lazy" width="797" height="1734"></div><figcaption>Three phosphors to pick from</figcaption></figure></li>
+        <li><figure class="shot"><div class="phone"><img src="/assets/shots/bellbearing-3.jpg" alt="The title card: Bell Bearing, tactical taco acquisition" loading="lazy" width="797" height="1734"></div><figcaption>The maker's title card</figcaption></figure></li>
+      </ul>
+    </section>
+
+    <section class="section wrap">
+      <div class="split">
+        <div class="prose">
+          <h2>Somewhere out there, a Crunchwrap.</h2>
+          <p style="margin-top:14px">Bell Bearing does one job. Open it, and an arrow points at the nearest Taco Bell, with the range ticking down as you walk. No map, no list, no reviews: just a bearing and a distance, the way a motion tracker would give them to you.</p>
+          <ul>
+            <li><strong>Tap the blip</strong> to lock onto that location instead of the nearest one, and tap again to let go.</li>
+            <li><strong>NAV</strong> hands off to Apple Maps for directions. <strong>SCAN</strong> forces a fresh search.</li>
+            <li><strong>PHOS</strong> cycles the phosphor: P1 green, P3 amber, P56 red.</li>
+            <li><strong>Tap the range</strong> to switch between metric and imperial.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:8px">Under the hood</h3>
+          <dl class="stack">
+            <div class="stack-row"><dt>App</dt><dd>SwiftUI, iOS 17+</dd></div>
+            <div class="stack-row"><dt>Tube</dt><dd>Metal shader</dd></div>
+            <div class="stack-row"><dt>Places</dt><dd>MapKit local search</dd></div>
+            <div class="stack-row"><dt>Sound</dt><dd>Synthesized audio + haptics</dd></div>
+            <div class="stack-row"><dt>Backend</dt><dd>None at all</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head"><h2>Built like a prop</h2><p>Half app, half movie prop. Every part of the tube is drawn live.</p></div>
+      <div class="features">
+        <div class="card"><h3><span class="glyph" aria-hidden="true">📺</span>A real-ish CRT</h3><p>A Metal shader bends the picture across a curved tube, with scanlines, color fringing, grain, flicker, the occasional glitch, and a power-on warm-up.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🔊</span>Every sound synthesized</h3><p>The pulse and the return ping are generated on the fly, with haptics to match. There isn't a single sound file in the app.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🧭</span>Search in rings</h3><p>Places come from Apple's MapKit search, in widening rings until something turns up. No API keys and no server of its own.</p></div>
+        <div class="card"><h3><span class="glyph" aria-hidden="true">🔩</span>Wear and tear</h3><p>The keys sit on a physical chin with indicator LEDs, scuffed by procedurally generated grime and scratches. A self test runs at boot.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <p class="fine">Bell Bearing is a fan project. It is not affiliated with, or endorsed by, Taco Bell. It just really likes them.</p>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head"><h2>More from the bench</h2></div>
+      <div class="siblings">
+        <a class="card sibling" href="/prosncons/"><img src="/assets/icons/prosncons.png" alt=""><div><strong>ProsNCons</strong><span>Pros and cons, together.</span></div></a>
+        <a class="card sibling" href="/thisorthat/"><img src="/assets/icons/thisorthat.png" alt=""><div><strong>ThisOrThat</strong><span>Two options. One winner.</span></div></a>
+        <a class="card sibling" href="/strngth/"><img src="/assets/icons/strngth.png" alt=""><div><strong>STRNGTH</strong><span>Your coach's program, logged.</span></div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 bodgy.dev</span>
+      <span>Made with care, and the occasional bodge.</span>
+    </div>
+  </footer>
+</body>
+</html>
