@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProsNCons Privacy Policy — bodgy.dev</title>
+  <meta name="description" content="What ProsNCons stores, what it doesn't, who can see it, and how to delete it.">
+  <meta name="theme-color" content="#FFF7EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="bodgy.dev home"><span class="mark" aria-hidden="true">b</span><span>bodgy<span class="tld">.dev</span></span></a>
+      <nav class="nav" aria-label="Products">
+        <a href="/prosncons/" aria-current="page">ProsNCons</a>
+        <a href="/thisorthat/">ThisOrThat</a>
+        <a href="/strngth/">STRNGTH</a>
+        <a href="/bellbearing/">Bell Bearing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc tint-mint">
+    <a class="back" href="/prosncons/"><img src="/assets/icons/prosncons.png" alt="">ProsNCons</a>
+    <h1>Privacy Policy</h1>
+    <p class="lede">ProsNCons is built to know as little about you as possible. There are no accounts, no names, no emails and no tracking.</p>
+    <p class="meta">Effective October 17, 2026</p>
+
+    <section class="card">
+      <h2>What we store</h2>
+      <p>To make shared decisions work, ProsNCons' server keeps, in a database hosted by Cloudflare:</p>
+      <ul>
+        <li><strong>Your random identity:</strong> an ID, the name, emoji and color the app made up for you, and a SHA-256 hash of its sign-in token. The token itself stays in your iCloud Keychain.</li>
+        <li><strong>What you create:</strong> decision titles, notes and colors, the pros and cons you write and who wrote them, and which decisions you're a member of.</li>
+        <li><strong>Invites:</strong> stored only as hashes of the invite code, along with who created and who used each one. Each link works once and expires after 7 days, and used and expired invites are deleted 7 days later.</li>
+        <li><strong>Your push token,</strong> if you allow notifications, for up to 5 of your devices. Tokens Apple reports as no longer valid are deleted.</li>
+        <li><strong>Notification bookkeeping:</strong> short-lived records of recent changes, used to write notification summaries and deleted after about an hour, and when you were last notified about each decision.</li>
+        <li><strong>A daily write counter,</strong> used to limit abuse.</li>
+      </ul>
+      <p>Creating a new identity is rate-limited by IP address for about a minute, using Cloudflare's rate limiter. IP addresses are not stored in our database. Cloudflare, which runs the server, keeps request logs for a limited time as part of operating it.</p>
+    </section>
+
+    <section class="card">
+      <h2>Notifications</h2>
+      <p>Notifications are opt-in. The app asks after you send your first invite or join a decision, never at launch. If you allow them, your device's push token is sent to Apple's push service with each notification. A notification shows the decision's title and a short summary, like "🦊 Zippy Fox added 2 pros".</p>
+    </section>
+
+    <section class="card">
+      <h2>What we don't collect</h2>
+      <p>No name, email address, phone number, contacts or location. No analytics, advertising or tracking, and no third-party SDKs in the app.</p>
+      <p>We never sell your data or share it with anyone, except the service providers that run the app: Cloudflare, which hosts the server and database, and Apple, which delivers notifications.</p>
+    </section>
+
+    <section class="card">
+      <h2>Who can see what</h2>
+      <ul>
+        <li>People in a decision see each other's random name, emoji and color, and everything written in that decision.</li>
+        <li>Only someone you send an invite link to can join, and each link works for one person.</li>
+        <li>Nobody else can see your decisions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Deleting your data</h2>
+      <p>In the app, tap your avatar, then <strong>Delete my data</strong>. That immediately removes:</p>
+      <ul>
+        <li>your identity</li>
+        <li>your push tokens</li>
+        <li>every decision you created, with everything in it, for everyone in it</li>
+        <li>your membership in other people's decisions</li>
+      </ul>
+      <p>Pros and cons you wrote in other people's decisions stay there, shown as coming from a former member, because the rest of the group may still be using them.</p>
+      <p>You can also leave a single decision, and its creator can remove you from it.</p>
+    </section>
+
+    <section class="card">
+      <h2>Children</h2>
+      <p>ProsNCons is not directed at children under 13.</p>
+    </section>
+
+    <section class="card">
+      <h2>Changes</h2>
+      <p>If this policy changes, we'll update this page and the date at the top.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 bodgy.dev</span>
+      <nav aria-label="ProsNCons"><a href="/prosncons/support/">Support</a><a href="/prosncons/privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
