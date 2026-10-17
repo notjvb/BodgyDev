@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThisOrThat Privacy Policy — bodgy.dev</title>
+  <meta name="description" content="What ThisOrThat stores, what it doesn't, who can see it, and how to delete it.">
+  <meta name="theme-color" content="#FFF7EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17151F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="bodgy.dev home"><span class="mark" aria-hidden="true">b</span><span>bodgy<span class="tld">.dev</span></span></a>
+      <nav class="nav" aria-label="Products">
+        <a href="/prosncons/">ProsNCons</a>
+        <a href="/thisorthat/" aria-current="page">ThisOrThat</a>
+        <a href="/strngth/">STRNGTH</a>
+        <a href="/bellbearing/">Bell Bearing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc tint-tangerine">
+    <a class="back" href="/thisorthat/"><img src="/assets/icons/thisorthat.png" alt="">ThisOrThat</a>
+    <h1>Privacy Policy</h1>
+    <p class="lede">ThisOrThat is built to know as little about you as possible. There are no accounts, no names, no emails and no tracking.</p>
+    <p class="meta">Effective October 17, 2026</p>
+
+    <section class="card">
+      <h2>What we store</h2>
+      <p>To make shared decisions work, ThisOrThat's server keeps:</p>
+      <ul>
+        <li><strong>Your random identity:</strong> the name, emoji and color the app made up for you, and a SHA-256 hash of its sign-in token. The token itself stays in your iCloud Keychain.</li>
+        <li><strong>What you create:</strong> decision titles and notes, option names and colors, criteria, their weights, and your votes, plus which decisions you're a member of.</li>
+        <li><strong>Invites:</strong> stored only as hashes of the invite code, along with who created and who used each one. Used and expired invites are deleted 7 days later.</li>
+        <li><strong>Your push token,</strong> if you turn notifications on, so we can deliver them.</li>
+        <li><strong>Notification bookkeeping:</strong> short-lived records of recent changes, used to write notification summaries and deleted after about an hour, and when you were last notified about each decision.</li>
+        <li><strong>A daily write counter,</strong> used to rate-limit changes.</li>
+      </ul>
+      <p>To stop abuse, creating a new identity is also rate-limited by IP address for about a minute. IP addresses are not stored in our database.</p>
+    </section>
+
+    <section class="card">
+      <h2>What we don't collect</h2>
+      <p>No name, email address, phone number, contacts or location. No analytics, advertising or tracking, and no third-party SDKs in the app.</p>
+      <p>We never sell your data or share it with anyone, except the service providers that run the app: Cloudflare, which hosts the server and database, and Apple, which delivers notifications.</p>
+    </section>
+
+    <section class="card">
+      <h2>Who can see what</h2>
+      <ul>
+        <li>People in a decision see each other's animal identity, everything added to the decision, and each other's votes.</li>
+        <li>Someone holding an invite link sees a preview: the decision's title, its two options, the members' avatars and the current score, but no individual votes.</li>
+        <li>Nobody else can see your decisions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Deleting your data</h2>
+      <p>In the app, tap your avatar, then <strong>Delete my data</strong>. That immediately removes:</p>
+      <ul>
+        <li>your identity</li>
+        <li>every decision you created, with all its criteria, votes and invites</li>
+        <li>your votes and memberships in other people's decisions</li>
+        <li>your push tokens</li>
+      </ul>
+      <p>Criteria you added to other people's decisions stay in those decisions, credited to a former member, because the rest of the group may still be using them.</p>
+    </section>
+
+    <section class="card">
+      <h2>Children</h2>
+      <p>ThisOrThat is not directed at children under 13.</p>
+    </section>
+
+    <section class="card">
+      <h2>Changes</h2>
+      <p>If this policy changes, we'll update this page and the date at the top.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 bodgy.dev</span>
+      <nav aria-label="ThisOrThat"><a href="/thisorthat/support/">Support</a><a href="/thisorthat/privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
