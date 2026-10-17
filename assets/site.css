@@ -157,15 +157,7 @@ p { margin: 0; }
 .btn.plain { --b-fill: var(--surface); --b-edge: var(--surface-edge); --b-ink: var(--ink); }
 .btn.small { padding: 8px 14px; font-size: .9rem; border-radius: 12px; }
 
-.chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 4px 12px; border-radius: 999px;
-  font-weight: 800; font-size: .85rem;
-  background: var(--soft, var(--surface)); color: var(--tint-ink, var(--ink-soft));
-  box-shadow: 0 2px 0 var(--soft-edge, var(--surface-edge));
-}
-
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
 .app-icon {
   width: 96px; height: 96px; border-radius: 22.5%;
@@ -222,7 +214,6 @@ p { margin: 0; }
 .product-hero { padding: 32px 0 24px; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
 .product-hero .app-icon { width: 132px; height: 132px; transform: rotate(-4deg); }
 .product-hero .tagline { font-size: clamp(1.15rem, 2.6vw, 1.45rem); font-weight: 700; color: var(--ink-soft); margin-top: 10px; max-width: 30em; }
-.product-hero .chips { margin-top: 18px; }
 @media (max-width: 640px) {
   .product-hero { grid-template-columns: 1fr; gap: 20px; }
   .product-hero .app-icon { width: 104px; height: 104px; }
